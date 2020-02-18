@@ -1,12 +1,20 @@
 console.log('-- load & test choices --');
-debugger; // step through loading & testing
+ // step through loading & testing
 
 // first argument is any string
 // second argument is what to do to that string
-function choices(str, option) {
+function choices(text, convertTo) {
 
+  if(convertTo === "big"){
+    return text.toUpperCase();
+  } else if(convertTo === "small"){
+    return text.toLowerCase();
+  } else if(convertTo === "slim"){
+    return text.trim();
+  }  else{
+    return "invalid option"
+  }
 }
-
 // declare and evaluate test cases for choices
 const choicesTests = [
   // option 1
@@ -36,7 +44,7 @@ console.log(choicesTests);
 
 // declare handler
 function choicesHandler() {
-  debugger; // step through user actions
+  // step through user actions
 
   // read & process user input
 
@@ -47,18 +55,7 @@ function choicesHandler() {
 }
 
   // execute core logic
-function choices(text, convertTo) {
 
-  if(convertTo === "big"){
-    return text.toUpperCase();
-  } else if(convertTo = "small"){
-    return text.toLowerCase();
-  } else if(convertTo === "slim"){
-    return text.trim();
-  }  else{
-    return "invalid option"
-  }
-}
   // display result to user
 function display(text){
   alert("the text is now : " + text)
@@ -67,7 +64,7 @@ function display(text){
   console.log('\n-- choices --');
   // user inputs
   // result
-}
+
 
 // attach handler to choices button with an event listener
 document.getElementById('choices-button').addEventListener('click', choicesHandler);

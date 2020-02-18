@@ -6,8 +6,7 @@ function replaceSubstring(str, oldThing, newThing) {
   oldThing = oldThing
     .split("")
     .map(d =>
-      d === "." || d === "|" || d === "+" || d === "*" ? (d = "\\" + d) : d
-    )
+      (d === "." || d === "|" || d === "+" || d === "*") ? "\\" + d : d )
     .join("");
 
   let r = new RegExp(oldThing, "g");
