@@ -3,6 +3,11 @@ console.log('-- load & test repeatCharacters --');
 
 // reapeat each character in a string, without changing the order
 function repeatCharacters(str, repetitions) {
+  
+if(typeof repetitions !== 'number' || isNaN(repetitions)){
+  return "repetitions must be a number";
+}
+return str.split("").map(x => x.repeat(repetitions)).join("");
 
 }
 
@@ -31,13 +36,17 @@ function repeatCharactersHandler() {
 
   // read & process user input
 
+  let userInput = prompt("enter a text")
+  let numberOfRepeats = prompt("enter a number");
+
   const numRepeatsIsANumber = typeof numRepeats === 'number';
   console.assert(numRepeatsIsANumber, 'cast numRepeats to type "number"');
 
   // execute core logic
+  let res = repeatCharacters(userInput,numberOfRepeats);
 
   // display result to user
-
+alert("text : " + res);
   // log action for developer
   console.log('\n-- repeatCharacters --');
   // user inputs
