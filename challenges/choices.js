@@ -40,10 +40,29 @@ function choicesHandler() {
 
   // read & process user input
 
+  let userInput = prompt("enter a text")
+  let choice = prompt("write 'small/big' to convert your text to lowercase or uppercase");
+  display(choices(userInput,choice));
+
+}
+
   // execute core logic
+function choices(text, convertTo) {
 
+  if(convertTo === "big"){
+    return text.toUpperCase();
+  } else if(convertTo = "small"){
+    return text.toLowerCase();
+  } else if(convertTo === "slim"){
+    return text.trim();
+  }  else{
+    return "invalid option"
+  }
+}
   // display result to user
-
+function display(text){
+  alert("the text is now : " + text)
+}
   // log action for developer
   console.log('\n-- choices --');
   // user inputs

@@ -1,5 +1,5 @@
 console.log('-- load & test repeatCharacters --');
-debugger; // step through loading & testing
+ // step through loading & testing
 
 // reapeat each character in a string, without changing the order
 function repeatCharacters(str, repetitions) {
@@ -27,7 +27,7 @@ console.log(repeatCharactersTests);
 
 // declare handler
 function repeatCharactersHandler() {
-  debugger; // step through user actions
+  // step through user actions
 
   // read & process user input
 
